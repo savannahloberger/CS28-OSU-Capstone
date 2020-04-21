@@ -78,7 +78,7 @@ More directions and information about that can be found here:
 
 2. Clone the repo to your local machine to run 
 ```
-$ git clone http://github.com/savannahloberger/CS-Capstone
+$ git clone http://github.com/savannahloberger/CS28-OSU-Capstone
 ```
 
 3. Then run make to build the program
