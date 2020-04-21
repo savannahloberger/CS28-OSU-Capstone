@@ -104,8 +104,8 @@ To run the program:
 $ ./tracker
 ```
 
-*WIP
-To run the unit testing: *
+*WIP *
+*To run the unit testing: *
 ```
 $ ./testing
 ```
