@@ -95,6 +95,16 @@ $ make
 
 There are hardware dependencies that has been emulated with the dummy data. The software runs using the provided "dummy data" that simulates the output of sensor data. The testing of the integration of the software with the project hardware will happen at a later time. 
 
+### Expected Output
+
+After running tracker, there should be a printed screen of the various sensor readings that are collected from either the "real data" or the "dummy data". 
+
+*WIP*
+
+Here is a picture of one of the outputs: 
+
+
+
 ### Steps
 
 Steps for running the head tracking software after following the install directions above: 
@@ -112,10 +122,11 @@ $ ./testing
 ```
 
 
-To clean up the files: 
+To clean up the files after use: 
 ```
 $ make clean
 ```
+You will need to rebuild after cleaning. 
 
 
 ## System Design and Requirements 
