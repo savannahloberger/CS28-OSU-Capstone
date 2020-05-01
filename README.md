@@ -45,9 +45,9 @@ Even when using accurate sensors for reading changes in the environment, there i
 
 ### Project Description
 
-Our project is a low cost, accurate, and low-latency implementation of a head tracker that is desinged for pilots. By combining a Raspberry Pi, 6 IMU sensors, and software, we can display and track an accurate location of the pilots head. 
+Our project is a low cost, accurate, and low-latency implementation of a head tracker that is designed for pilots. By combining a Raspberry Pi, 6 IMU sensors, and software, we can display and track an accurate location of the pilots head. 
 
-The software will read the data from the sensors, calculate the head position based on the data, and send the head position to the display system in real time for testing. The software will be applied to an AR system which used to improve the pilots’ safety and operation during their flight. For this project, the software is designed to read data from six IMU units and run on Linux that is installed on a Raspberry Pi. Fast, accurate, and lightweight software used for helicopter pilots display head positioning that averages IMU sensor data and corrects drift. 
+The software will read the data from the sensors, calculate the head position based on the data, and send the head position to the display system in real time for testing. The software will be applied to an AR system which used to improve the pilots’ safety and operation during their flight. For this project, the software is desigdned to read data from six IMU units and run on Linux that is installed on a Raspberry Pi. Fast, accurate, and lightweight software used for helicopter pilots display head positioning that averages IMU sensor data and corrects drift. 
 
 Primary software tools and languages: python, C, multithreading, microcontrollers, and sensor data. 
 
