@@ -50,12 +50,6 @@ display(SensorData *result, DisplayBuffer *display_buffer)
   // Clear screen
   printf("\e[1;1H\e[2J"); // using regex - too fast??
   // system("clear"); seg fault for some reasom??
-  //
-  // printf("x:%lf\t",result->x);
-  // printf("y:%lf\t",result->y);
-  // printf("z:%lf\t",result->z);
-  // printf("time:%d\t",result->time);
-  // printf("\n");
 
   //Header
   printf("####################################################################\n");
