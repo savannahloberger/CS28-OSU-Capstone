@@ -1,3 +1,14 @@
-## Unit testing files go in this directory
+## Unit Testing provided
 
-## Add more info later
+Unit testing files go in this directory.
+
+Add more info later.
+
+
+## Running tests
+
+
+
+## Writing Tests 
+
+Guidelines... 
