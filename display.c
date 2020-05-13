@@ -42,14 +42,22 @@ reset_displaybuffer(DisplayBuffer *display_buffer)
 }
 
 void
-display(SensorData *result, DisplayBuffer *display_buffer)
+display(SensorData *result, DisplayBuffer *display_buffer, int regex)
 {
   int i;
   result->time = get_runtime();            //get the runtime, unit: 10^-6s
 
   // Clear screen
-  printf("\e[1;1H\e[2J"); // using regex - too fast??
+  if (regex == 1){
+    printf("\e[1;1H\e[2J"); // using regex - too fast??
+  }
   // system("clear"); seg fault for some reasom??
+  //
+  // printf("x:%lf\t",result->x);
+  // printf("y:%lf\t",result->y);
+  // printf("z:%lf\t",result->z);
+  // printf("time:%d\t",result->time);
+  // printf("\n");
 
   //Header
   printf("####################################################################\n");

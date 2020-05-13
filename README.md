@@ -45,9 +45,9 @@ Even when using accurate sensors for reading changes in the environment, there i
 
 ### Project Description
 
-Our project is a low cost, accurate, and low-latency implementation of a head tracker that is designed for pilots. By combining a Raspberry Pi, 6 IMU sensors, and software, we can display and track an accurate location of the pilots head. 
+Our project is a low cost, accurate, and low-latency implementation of a head tracker that is desinged for pilots. By combining a Raspberry Pi, 6 IMU sensors, and software, we can display and track an accurate location of the pilots head. 
 
-The software will read the data from the sensors, calculate the head position based on the data, and send the head position to the display system in real time for testing. The software will be applied to an AR system which used to improve the pilots’ safety and operation during their flight. For this project, the software is desigdned to read data from six IMU units and run on Linux that is installed on a Raspberry Pi. Fast, accurate, and lightweight software used for helicopter pilots display head positioning that averages IMU sensor data and corrects drift. 
+The software will read the data from the sensors, calculate the head position based on the data, and send the head position to the display system in real time for testing. The software will be applied to an AR system which used to improve the pilots’ safety and operation during their flight. For this project, the software is designed to read data from six IMU units and run on Linux that is installed on a Raspberry Pi. Fast, accurate, and lightweight software used for helicopter pilots display head positioning that averages IMU sensor data and corrects drift. 
 
 Primary software tools and languages: python, C, multithreading, microcontrollers, and sensor data. 
 
@@ -78,7 +78,7 @@ More directions and information about that can be found here:
 
 2. Clone the repo to your local machine to run 
 ```
-$ git clone http://github.com/savannahloberger/CS28-OSU-Capstone
+$ git clone http://github.com/savannahloberger/CS-Capstone
 ```
 
 3. Then run make to build the program
@@ -95,16 +95,6 @@ $ make
 
 There are hardware dependencies that has been emulated with the dummy data. The software runs using the provided "dummy data" that simulates the output of sensor data. The testing of the integration of the software with the project hardware will happen at a later time. 
 
-### Expected Output
-
-After running tracker, there should be a printed screen of the various sensor readings that are collected from either the "real data" or the "dummy data". 
-
-*WIP*
-
-Here is a picture of one of the outputs: 
-
-
-
 ### Steps
 
 Steps for running the head tracking software after following the install directions above: 
@@ -114,19 +104,18 @@ To run the program:
 $ ./tracker
 ```
 
-*WIP*
-
-*To run the unit testing*
+*WIP
+To run the black-box testing: *
 ```
+$ make testing
 $ ./testing
 ```
 
 
-To clean up the files after use: 
+To clean up the files: 
 ```
 $ make clean
 ```
-You will need to rebuild after cleaning. 
 
 
 ## System Design and Requirements 
@@ -192,6 +181,8 @@ More API documentation coming soon!
 ## Contributing
 
 Further contributing documentation coming soon! 
+
+PRs accepted.
 
 Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 

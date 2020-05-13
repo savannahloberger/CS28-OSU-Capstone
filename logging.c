@@ -1,5 +1,4 @@
 #include "logging.h"
-#include "util.h"
 
 void
 logging(FILE *fp, SensorData *sensor_data)
@@ -35,7 +34,14 @@ logging(FILE *fp, SensorData *sensor_data)
   fprintf(fp, "y: %lf\t", sensor_data->y);
   fprintf(fp, "z: %lf\t", sensor_data->z);
 
-  fprintf(fp, "time: %u\n", sensor_data->time);
+  fprintf(fp, "time: %u\t\t", sensor_data->time);
+
+  if (sensor_data->valid == 1){
+    fprintf(fp, "valid\n");
+  }
+  else{
+    fprintf(fp, "invalid\n");
+  }
 }
 
 void
@@ -61,6 +67,7 @@ copy_sensor_data(SensorData *src, SensorData *des){
   des->y = src->y;
   des->z = src->z;
   des->time = src->time;
+  des->valid = src->valid;
   des->sensor_type = src->sensor_type;
   des->driver_library = src->driver_library;
 }

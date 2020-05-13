@@ -31,6 +31,7 @@ GetData (int count, SensorConfig *sensor_readings, ReadBuffer* read_buffer)
     read_buffer->sensor_data[i].y = sensor_readings[i].last_read.y;
     read_buffer->sensor_data[i].z = sensor_readings[i].last_read.z;
     read_buffer->sensor_data[i].time = 0;
+    read_buffer->sensor_data[i].valid = sensor_readings[i].valid;
     read_buffer->sensor_data[i].system_time = sensor_readings[i].last_read.time;
     read_buffer->sensor_data[i].sensor_type = sensor_readings[i].sensor_type;
     read_buffer->sensor_data[i].driver_library = sensor_readings[i].driver_library;

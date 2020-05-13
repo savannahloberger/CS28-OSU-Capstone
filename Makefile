@@ -1,6 +1,10 @@
 all: main.c dummy.o read_data.o runtime.o display.o logging.o check_connection.o average.o
 	gcc -g -pthread -o tracker main.c dummy.o read_data.o runtime.o display.o logging.o check_connection.o average.o
 
+testing: main.c dummy.o read_data.o runtime.o display.o logging.o check_connection.o average.o
+	make tests
+	gcc -g -pthread -DTESTING -o testing main.c dummy.o read_data.o runtime.o display.o logging.o check_connection.o average.o testing.o
+
 runtime: runtime.c runtime.h util.h
 
 dummy: dummy.c dummy.h data.h util.h
@@ -21,5 +25,8 @@ check_connection: check_connection.c check_connection.h util.h
 average: average.c average.h util.h
 	gcc -g -c average.c
 
+tests: ./tests/testing.c ./tests/testing.h util.h
+	gcc -g -c ./tests/testing.c
+
 clean:
-	rm -f *.o tracker log.txt
+	rm -f *.o ./tracker ./testing ./log.txt

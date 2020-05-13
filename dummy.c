@@ -81,13 +81,6 @@ dummy_generator(int *count)
   int i;
   SensorConfig *sensor_readings;
 
-  // if(sensor_readings){
-  //   for(i = 0; i < *sensor_count; i++ )
-  //     free(sensor_readings[i].sensor);
-  //   free(sensor_readings);
-  // }
-
-
   srand(time(NULL));
   *count = NUM_OF_READ;
 

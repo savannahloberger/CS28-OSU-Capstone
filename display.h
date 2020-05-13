@@ -5,7 +5,7 @@
 #include "data.h"
 
 void
-display(SensorData *result, DisplayBuffer *display_buffer);
+display(SensorData *result, DisplayBuffer *display_buffer, int regex);
 
 void
 init_displaybuffer(DisplayBuffer *display_buffer);

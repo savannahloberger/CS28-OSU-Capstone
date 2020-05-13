@@ -106,6 +106,7 @@ typedef struct SensorData {
   double y;
   double z;
 	unsigned int time;
+  unsigned int valid;
   struct timespec system_time;
   SensorType sensor_type;
   DriverLibrary driver_library;

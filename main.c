@@ -7,6 +7,10 @@
 #include "display.h"
 #include "check_connection.h"
 
+#ifdef TESTING
+#include "./tests/testing.h"
+#endif
+
 static int sensor_count = 0;            //this variable keep track on how many set of sensor data was read
 
 static int sensor_total = 6;      			//total sensors that we are reading from
@@ -103,8 +107,6 @@ thread_read_cal_dis(void *arg)
 
     init_displaybuffer(display_buffer);
 
-    // int i;
-    // for (i = 0; i < 10; i++){
     while(1){
       if(connection == 0){
         free(result);                                            //free memory
@@ -120,9 +122,15 @@ thread_read_cal_dis(void *arg)
 
       }
 
-      start_time();                                          //start counting runtime, unit: 10^-6s
-
+      start_time();
+                                              //start counting runtime, unit: 10^-6s
+#ifndef TESTING
       sensor_readings = read_sensors(&sensor_count);         //read from the api, store the result to sensor_readings array
+#endif
+
+#ifdef TESTING
+      sensor_readings =testing_cases_generator(&sensor_count);
+#endif
 
       GetData(sensor_count, sensor_readings, read_buffer);   //grab the x, y, z, time and sensor_type from the sensor_readings and store them to read_buffer
 
@@ -132,7 +140,13 @@ thread_read_cal_dis(void *arg)
 
       average(result, display_buffer, read_buffer);          //averaging each cords for each type of sensors and store them to result(fix!!! need to averaging for each type of sensors)
 
-      display(result, display_buffer);                       //display the result (fix!!! need to display for each type of sensors)
+#ifndef TESTING
+      display(result, display_buffer, 1);                       //display the result (fix!!! need to display for each type of sensors)
+#endif
+
+#ifdef TESTING
+      display(result, display_buffer, 0);                       //display the result (fix!!! need to display for each type of sensors)
+#endif
 
       pthread_mutex_lock(&mutex_logging_buffer);             //lock the logging_buffer so the logging thread won't be able to access it
 
