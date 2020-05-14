@@ -56,6 +56,9 @@ average(SensorData *result, DisplayBuffer *display_buffer, ReadBuffer *read_buff
     }
   }
 
+  result->x = 0;
+  result->y = 0;
+  result->z = 0;
 //result
   if(valid_read > 0) {
     result->x = avgx / (double) (valid_read);
@@ -63,6 +66,10 @@ average(SensorData *result, DisplayBuffer *display_buffer, ReadBuffer *read_buff
     result->z = avgz / (double) (valid_read);
     result->sensor_type = Tru;
     result->valid = 1;
+  }
+  else{
+    result->sensor_type = Tru;
+    result->valid = 0;
   }
 
 //display_buffer
