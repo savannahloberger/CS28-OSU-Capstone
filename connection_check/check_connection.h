@@ -1,7 +1,7 @@
 #ifndef CHECK_CONN
 #define CHECK_CONN
 
-#include "util.h"
+#include "../unity/util.h"
 
 #define MAX_LOST_DURATION_IN_SEC 10
 

@@ -1,8 +1,8 @@
 #ifndef LOGGING
 #define LOGGING
 
-#include "util.h"
-#include "data.h"
+#include "../unity/util.h"
+#include "../reading/data.h"
 
 #define LOG_RATE 50
 #define MIN_FREE_SPACE 20

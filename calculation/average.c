@@ -1,5 +1,5 @@
 #include "average.h"
-#include "util.h"
+#include "../unity/util.h"
 
 int display_buffer_len = NUM_OF_TYPE * NUM_OF_SENSOR_TYPE;
 

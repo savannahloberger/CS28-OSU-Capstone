@@ -1,8 +1,8 @@
 #ifndef DISPLAY
 #define DISPLAY
 
-#include "util.h"
-#include "data.h"
+#include "../unity/util.h"
+#include "../reading/data.h"
 
 void
 display(SensorData *result, DisplayBuffer *display_buffer, int regex);

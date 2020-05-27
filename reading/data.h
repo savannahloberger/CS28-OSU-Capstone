@@ -1,6 +1,6 @@
 #ifndef SENSOR_DATA_TYPE
 #define SENSOR_DATA_TYPE
-#include "util.h"
+#include "../unity/util.h"
 /*
  *  Specifies the driver library to be used,
  *  important to signify the HW model of sensor.

@@ -1,5 +1,5 @@
 #include "display.h"
-#include "runtime.h"
+#include "../unity/runtime.h"
 
 void
 init_displaybuffer(DisplayBuffer *display_buffer)

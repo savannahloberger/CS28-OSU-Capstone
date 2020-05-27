@@ -1,7 +1,7 @@
 #ifndef RUNTIME
 #define RUNTIME
 
-#include "util.h"
+#include "../unity/util.h"
 
 static struct timeval st, et;
 
