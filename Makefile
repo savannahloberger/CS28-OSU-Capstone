@@ -3,8 +3,8 @@ FLAGS = -g
 TESTING = -DTESTING
 PTHREAD = -pthread
 
-all: main.c dummy read_data runtime display logging check_connection average
-	$(CC) $(FLAGS) $(PTHREAD) -o tracker main.c dummy.o read_data.o runtime.o display.o logging.o check_connection.o average.o
+all: main.c read_data.o runtime.o display.o logging.o check_connection.o average.o
+	$(CC) $(FLAGS) $(PTHREAD) -o tracker main.c read_data.o runtime.o display.o logging.o check_connection.o average.o -lHTApi -lrt -lwiringPi
 
 testing: main.c dummy read_data runtime display logging check_connection average blackbox
 	$(CC) $(FLAGS) $(TESTING) $(PTHREAD) -o testing main.c dummy.o read_data.o runtime.o display.o logging.o check_connection.o average.o testing.o
