@@ -2,16 +2,13 @@
 #include "../unity/util.h"
 #include "dummy.h"
 
-
-SensorConfig *
-read_sensors(int *count)
-{
-  /* dummy generator*/
-
-  *count = 0;
-  return dummy_generator(count);
-
-}
+// SensorConfig *
+// read_sensors(int *count)
+// {
+//   /* dummy generator*/
+//   SensorConfig *sensor_readings = read_sensors(count);
+//   return sensor_readings;
+// }
 
 
 void
