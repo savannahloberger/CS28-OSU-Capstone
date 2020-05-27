@@ -41,7 +41,10 @@ init_logging_buffer();                  //function for alloc memory for logging 
 int
 main(int argc, char const *argv[])
 {
-
+  init_ht_api();
+  clear_sensors();
+  load_sensors("/home/pi/HT_Sensor_API/cloud_app/config.txt");
+	
   int ret;                  //check if the pthread_create success
 
   init_logging_buffer();    //alloc memory for logging buffer, set it's logged(start point), size to 0, capacity
