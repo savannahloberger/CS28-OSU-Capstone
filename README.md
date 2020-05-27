@@ -182,7 +182,6 @@ More API documentation coming soon!
 
 Further contributing documentation coming soon! 
 
-PRs accepted.
 
 Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
