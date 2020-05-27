@@ -17,5 +17,6 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
+#include <HTSensors.h>
 
 #endif
